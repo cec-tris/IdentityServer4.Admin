@@ -285,4 +285,5 @@ appsettings.*.json
 
 /shared/nginx/certs/
 
-docker-compose.dev.yml
+.env.prod
+.env
