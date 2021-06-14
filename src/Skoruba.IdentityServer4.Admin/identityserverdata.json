@@ -70,6 +70,24 @@
           "role",
           "name"
         ]
+      },
+      {
+        "Name": "CHUNO.DataAPI",
+        "DisplayName": "CHUNO.DataAPI",
+        "Required": false,
+        "UserClaims": []
+      },
+      {
+        "Name": "CHUNO.MediaAPI",
+        "DisplayName": "CHUNO.MediaAPI",
+        "Required": false,
+        "UserClaims": []
+      },
+      {
+        "Name": "CHUNO.IncidentAPI",
+        "DisplayName": "CHUNO.IncidentAPI",
+        "Required": false,
+        "UserClaims": []
       }
     ],
     "ApiResources": [
@@ -77,6 +95,24 @@
         "Name": "skoruba_identity_admin_api",
         "Scopes": [
           "skoruba_identity_admin_api"
+        ]
+      },
+      {
+        "Name": "CHUNO.DataAPI",
+        "Scopes": [
+          "CHUNO.DataAPI"
+        ]
+      },
+      {
+        "Name": "CHUNO.MediaAPI",
+        "Scopes": [
+          "CHUNO.MediaAPI"
+        ]
+      },
+      {
+        "Name": "CHUNO.IncidentAPI",
+        "Scopes": [
+          "CHUNO.IncidentAPI"
         ]
       }
     ],
