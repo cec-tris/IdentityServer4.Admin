@@ -6,13 +6,69 @@
 @inject IRootConfiguration RootConfiguration
 
 <div class="login-page">
-    <div class="page-header">
+    @*<div class="page-header">
         <h1>@Localizer["Title"]</h1>
-    </div>
+    </div>*@
 
     @await Html.PartialAsync("_ValidationSummary")
+    
+    <div class="login-container d-flex flex-column align-items-center justify-content-center h-100 m-auto">
+        <div class="login-heading d-flex flex-column justify-content-center align-items-center space-y-2">
+            <img src="@UrlHelper.Content("~/images/tris-logo.svg")" alt="Tris Logo"/>
+            <h1 class="login-header font-weight-bold">TriS DA</h1>
+        </div>
+        <div class="login-form w-100 d-flex flex-column">
+            <div class="login-form-heading">
+                <h5 class="login-form-header">Đăng nhập</h5>
+            </div>
+            <form asp-route="Login">
+                <input type="hidden" asp-for="ReturnUrl" />
+                
+                <fieldset class="d-flex flex-column">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="login-icon d-flex justify-content-center input-group-text py-3" id="input-username">
+                                    <i class="fa fa-user" title="User" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input class="form-control" placeholder="Tên đăng nhập" asp-for="Username" aria-label="Username" aria-describedby="input-username" autofocus>
+                        </div>
+                    </div>
 
-    <div class="row">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="login-icon d-flex justify-content-center input-group-text py-3" id="input-password">
+                                    <i class="oi oi-key" title="Key" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Mật khẩu" aria-label="Password" aria-describedby="input-password" asp-for="Password" autocomplete="off">
+                        </div>
+                    </div>
+
+                    @if (Model.AllowRememberLogin)
+                    {
+                        <label for="input-checkbox" class="login-remember form-group align-self-end">
+                            <span class="login-remember-text">Ghi nhớ đăng nhập</span>
+                            <input id="input-checkbox" class="login-remember-input" placeholder="Ghi nhớ mật khẩu" asp-for="RememberLogin" type="checkbox">
+                            <span class="login-remember-checkbox"></span>
+                        </label>
+                    }
+
+                    <!--Button-->
+                    <div class="form-group d-flex justify-content-between mt-3">
+                        <a asp-action="ForgotPassword" asp-controller="Account" class="btn btn-link forgot-password-cta" value="forgot">Quên mật khẩu</a>
+                        <button class="btn login-cta" name="button" value="login">Đăng nhập</button>
+                    </div>
+                </fieldset>
+
+            </form>
+        </div>
+    </div>
+
+
+    @*<div class="row">
 
         @if (Model.EnableLocalLogin)
         {
@@ -114,5 +170,5 @@
                 @Localizer["NoSchema"]
             </div>
         }
-    </div>
+    </div>*@
 </div>

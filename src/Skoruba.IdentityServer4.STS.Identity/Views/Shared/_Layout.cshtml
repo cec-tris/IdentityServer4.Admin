@@ -46,7 +46,7 @@
     @await RenderSectionAsync("styles", required: false)
 </head>
 <body>
-
+    @*
     <div class="menu d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom box-shadow">
         <!--Site name -->
         <h3 class="menu-logo my-0 mr-md-auto font-weight-normal"><a class="logo" asp-area="" asp-controller="Home" asp-action="Index">@RootConfiguration.AdminConfiguration.PageTitle</a></h3>
@@ -82,10 +82,12 @@
             <span class="oi oi-menu" title="menu" aria-hidden="true"></span> @Localizer["Menu"]
         </a>
     </div>
+    *@
 
-    <div class="container">
+    <div class="h-100 container-fluid px-0"> @*container*@
         @RenderBody()
-
+        
+        @*
         <footer class="pt-4 my-md-5 pt-md-5 border-top">
             <div class="row">
                 <div class="col-6 col-md">
@@ -100,6 +102,7 @@
                 </div>
             </div>
         </footer>
+        *@
     </div>
 
     <environment include="Development">

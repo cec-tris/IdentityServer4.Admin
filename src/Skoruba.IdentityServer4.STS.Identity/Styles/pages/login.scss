@@ -1,0 +1,145 @@
+﻿.login-page {
+    background-image: url('../../images/tris-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.login-container {
+    max-width: 28rem;
+}
+
+.login-heading {
+    margin-bottom: 1.125rem;
+}
+
+.login-header {
+    font-size: 2.25rem;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.login-form {
+    background-color: #050E39;
+    border-radius: 3px;
+    min-height: 18.75rem;
+    padding: 1.5rem;
+
+    &-heading {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    &-header {
+        font-size: 1.125rem;
+        font-weight: normal;
+        color: #FFFFFFE0;
+        margin: 0;
+    }
+
+    .login-icon {
+        background-color: #009FFF;
+        color: #030630;
+        box-sizing: border-box;
+        min-width: 2.5rem;
+
+        i {
+            font-size: 0.875rem;
+        }
+    }
+
+    input.form-control {
+        background-color: #041A48;
+        color: #FFFFFF80;
+        font: inherit;
+        font-size: 0.875rem;
+        padding-left: 1.5rem;
+
+        &::placeholder {
+            color: #FFFFFF80;
+            opacity: 0.8;
+            font: inherit;
+        }
+    }
+
+    input.form-control,
+    span.login-icon.input-group-text {
+        border: unset;
+    }
+
+    .login-remember {
+        cursor: pointer;
+        font-size: 0.875rem;
+        color: #FFFFFF;
+        opacity: 0.8;
+        margin-right: 1rem;
+        position: relative;
+
+        &-text {
+            margin-right: 0.75rem;
+        }
+
+        .login-remember-input {
+            opacity: 0;
+            height: 0;
+            width: 0;
+            cursor: pointer;
+            position: absolute;
+
+            &:checked ~ .login-remember-checkbox:after {
+                display: block;
+                border: solid #030630;
+                border-width: 0 3px 3px 0;
+            }
+
+            &:checked ~ .login-remember-checkbox {
+                background: #009FFF;
+            }
+        }
+
+        &-checkbox {
+            border: 1px solid #009FFF;
+            border-radius: 3px;
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+            background: transparent;
+            position: absolute;
+
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                border: solid #FFFFFFE0;
+                border-width: 0 3px 3px 0;
+                top: 0px;
+                left: 0.25rem;
+                width: 0.5rem;
+                height: 0.75rem;
+            }
+        }
+    }
+
+    .forgot-password-cta {
+        color: #009FFF;
+        font-size: 0.875rem;
+    }
+
+    .login-cta {
+        padding: 0.75rem 2rem;
+        color: #FFFFFF;
+        background-color: #007FFF;
+        font-size: 0.875rem;
+        width: 9rem;
+        box-sizing: border-box;
+    }
+}
+
+.space-y-2 > * + * {
+    margin-top: 0.5rem;
+}
