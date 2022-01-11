@@ -9,3 +9,34 @@
 		height: 0;
 	}
 }
+
+.logout-page {
+	background-image: url('../../images/tris-background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+}
+
+.logout-container {
+	display: flex;
+	flex-direction: column;
+	max-width: 18.75rem;
+	margin: 0 auto;
+	align-items: center;
+	padding: 9rem;
+
+	h3.logout-title {
+		font-size: 1.5rem;
+		color: #ffffff;
+		margin-bottom: 2.5rem;
+	}
+
+	button.redirect-btn {
+		border-radius: 3px;
+		padding: 0.5rem 2rem;
+		border: 1px solid #009FFF;
+		background-color: transparent;
+		color: #009FFF;
+	}
+}

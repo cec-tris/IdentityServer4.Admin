@@ -1,4 +1,27 @@
 /*Common*/
+* {
+  box-sizing: inherit;
+  font: inherit; }
+
+html, body {
+  height: 100vh;
+  font-family: 'SVN-Helvetica Neue';
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'SVN-Helvetica Neue';
+  src: url("../fonts/SVN-HelveticaNeue-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'SVN-Helvetica Neue';
+  src: url("../fonts/SVN-HelveticaNeue-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+
 @media (max-width: 767px) {
   .menu {
     text-align: center; }
@@ -467,10 +490,142 @@ label.radio-img > h3, label > h4 {
   .consent-container .client-logo img {
     margin-right: 25px; }
 
+.login-page {
+  background-image: url("../../images/tris-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw; }
+
+.login-container {
+  max-width: 28rem; }
+
+.login-heading {
+  margin-bottom: 1.125rem; }
+
+.login-header {
+  font-size: 2.25rem;
+  color: #FFFFFF;
+  margin: 0; }
+
+.login-form {
+  background-color: #050E39;
+  border-radius: 3px;
+  min-height: 18.75rem;
+  padding: 1.5rem; }
+  .login-form-heading {
+    text-align: center;
+    margin-bottom: 1.5rem; }
+  .login-form-header {
+    font-size: 1.125rem;
+    font-weight: normal;
+    color: #FFFFFFE0;
+    margin: 0; }
+  .login-form .login-icon {
+    background-color: #009FFF;
+    color: #030630;
+    box-sizing: border-box;
+    min-width: 2.5rem; }
+    .login-form .login-icon i {
+      font-size: 0.875rem; }
+  .login-form input.form-control {
+    background-color: #041A48;
+    color: #FFFFFF80;
+    font: inherit;
+    font-size: 0.875rem;
+    padding-left: 1.5rem; }
+    .login-form input.form-control::placeholder {
+      color: #FFFFFF80;
+      opacity: 0.8;
+      font: inherit; }
+  .login-form input.form-control,
+  .login-form span.login-icon.input-group-text {
+    border: unset; }
+  .login-form .login-remember {
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #FFFFFF;
+    opacity: 0.8;
+    margin-right: 1rem;
+    position: relative; }
+    .login-form .login-remember-text {
+      margin-right: 0.75rem; }
+    .login-form .login-remember .login-remember-input {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      cursor: pointer;
+      position: absolute; }
+      .login-form .login-remember .login-remember-input:checked ~ .login-remember-checkbox:after {
+        display: block;
+        border: solid #030630;
+        border-width: 0 3px 3px 0; }
+      .login-form .login-remember .login-remember-input:checked ~ .login-remember-checkbox {
+        background: #009FFF; }
+    .login-form .login-remember-checkbox {
+      border: 1px solid #009FFF;
+      border-radius: 3px;
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+      background: transparent;
+      position: absolute; }
+      .login-form .login-remember-checkbox:after {
+        content: "";
+        position: absolute;
+        display: none;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        border: solid #FFFFFFE0;
+        border-width: 0 3px 3px 0;
+        top: 0px;
+        left: 0.25rem;
+        width: 0.5rem;
+        height: 0.75rem; }
+  .login-form .forgot-password-cta {
+    color: #009FFF;
+    font-size: 0.875rem; }
+  .login-form .login-cta {
+    padding: 0.75rem 2rem;
+    color: #FFFFFF;
+    background-color: #007FFF;
+    font-size: 0.875rem;
+    width: 9rem;
+    box-sizing: border-box; }
+
+.space-y-2 > * + * {
+  margin-top: 0.5rem; }
+
 .logged-out-container iframe {
   display: none;
   width: 0;
   height: 0; }
+
+.logout-page {
+  background-image: url("../../images/tris-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw; }
+
+.logout-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 18.75rem;
+  margin: 0 auto;
+  align-items: center;
+  padding: 9rem; }
+  .logout-container h3.logout-title {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 2.5rem; }
+  .logout-container button.redirect-btn {
+    border-radius: 3px;
+    padding: 0.5rem 2rem;
+    border: 1px solid #009FFF;
+    background-color: transparent;
+    color: #009FFF; }
 
 .grants-container .page-header {
   margin-bottom: 10px; }
